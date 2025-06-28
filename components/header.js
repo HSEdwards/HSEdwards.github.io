@@ -7,15 +7,9 @@ class Header extends HTMLElement {
     this.innerHTML = `
     <style>
     // Some base styles
-    @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+    
 
-    body {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: radial-gradient(circle, #322538, #1f1f1f);
-    font-size: 13px;
-    }
-
-    #header {
+    header {
     padding: 2rem;
     }
 
@@ -30,7 +24,7 @@ class Header extends HTMLElement {
     $hamburger-height: 50px;
     $hamburger-zindex: $menu-zindex + 10;
 
-    #menu {
+    menu {
     background: $menu-bg;
     height: 100%;
     left: 0;
@@ -205,10 +199,8 @@ class Header extends HTMLElement {
         }
     }
     }
-
-
-
     </style>
+    
     <header id="header">
         <nav class="nav">
             <button class="toggle-menu">
