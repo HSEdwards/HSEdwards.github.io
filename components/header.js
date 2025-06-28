@@ -5,180 +5,203 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <style>
-@import url('https://fonts.googleapis.com/css?family=Lato');
-*
-  box-sizing border-box
+      <style>@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+html:before,
+body:before {
+  background: linear-gradient(35deg, #34623F, #1DD3B0);
+  bottom: 0;
+  content: '';
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+}
+svg {
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+svg path {
+  fill: #fff;
+}
+ol {
+  list-style-type: none;
+}
+a[href] {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+a[href]:hover:after {
+  transform: scaleX(1);
+}
+a[href]:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  height: 4px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  transition: transform 0.15s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.menu {
+  position: relative;
+  width: 250px;
+}
+.menu__content {
+  color: #fff;
+  margin: 0;
+  padding: 0 0 25px 0;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 250px;
+  z-index: 2;
+}
+.menu__toggle-label {
+  height: 44px;
+  left: 0;
+  position: absolute;
+  width: 44px;
+}
+.menu__toggle-label svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform 0.15s;
+  z-index: 2;
+}
+.menu__toggle-label svg:nth-of-type(2) {
+  left: 250px;
+  transform: scale(0);
+}
+.menu__toggle {
+  opacity: 0;
+  position: fixed;
+}
+.menu__toggle:checked ~ .menu__toggle-label {
+  background: rgba(0,0,0,0.65);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background 0.15s;
+  width: 100vw;
+}
+.menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(1) {
+  transform: scale(0);
+}
+.menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(2) {
+  left: 250px;
+  transform: scale(1);
+  transition: transform 0.15s;
+  transition-delay: 0.925s;
+}
+.menu__toggle:checked ~ .menu__content {
+  transform: translate(100%, 0);
+}
+.menu__toggle:checked ~ .menu__content .menu-item {
+  transform: translateX(0);
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.15s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
+  border-color: #1E2F23;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) a[href]:after {
+  background: #34623F;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
+  border-color: #607744;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) a[href]:after {
+  background: #1DD3B0;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
+  border-color: #FFBD00;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) a[href]:after {
+  background: #1DD3B0;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
+  border-color: #607744;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) a[href]:after {
+  background: #34623F;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
+  border-color: #1E2F23;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) a[href]:after {
+  background: #FFBD00;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
+  transition-delay: 0.225s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
+  transition-delay: 0.275s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
+  transition-delay: 0.325s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(1) {
+  transition-delay: 0.375s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(2) {
+  transition-delay: 0.425s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(3) {
+  transition-delay: 0.475s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
+  transition-delay: 0.525s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(1) {
+  transition-delay: 0.575s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(2) {
+  transition-delay: 0.625s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(3) {
+  transition-delay: 0.675s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
+  transition-delay: 0.725s, 0.875s;
+}
+.menu__content > .menu-item {
+  border-left: 8px solid transparent;
+}
+.menu__content > .menu-item > a {
+  line-height: 44px;
+  min-width: 60px;
+}
+.sub-menu {
+  padding: 0 0 0 44px;
+}
+.menu-item {
+  line-height: 44px;
+  min-height: 44px;
+  padding: 0 12px;
+  transform: translateX(-100%);
+}
+.menu-item .menu-item {
+  transform: translateX(-150%);
+}
 
-$width = 250px
-$duration = .15s
-$delayStep = .05s
-$baseDelay = 1.5 * $duration
-$borderDelay = $baseDelay + (10 * $delayStep) + $duration
-
-html
-body
-  font-family 'Lato', sans-serif
-  margin 0
-  min-height 100vh
-  padding 0
-
-  &:before
-    background linear-gradient(35deg, #34623F, #1DD3B0)
-    bottom 0
-    content ''
-    height 100vh
-    left 0
-    position fixed
-    top 0
-    right 0
-    width 100vw
-
-svg
-  cursor pointer
-  height 44px
-  width 44px
-
-  path
-    fill #fff
-
-ol
-  list-style-type none
-
-a[href]
-  color #ffffff
-  position relative
-  text-decoration none
-
-  &:hover
-    &:after
-      transform scaleX(1)
-
-  &:after
-    content ''
-    position absolute
-    top 100%
-    height 4px
-    background #fff
-    left 0
-    right 0
-    transition transform $duration
-    transform-origin left
-    transform scaleX(0)
-
-
-.menu
-  position relative
-  width $width
-
-  &__content
-    color #ffffff
-    margin 0
-    padding 0 0 25px 0
-    position absolute
-    right 100%
-    top 0
-    width $width
-    z-index 2
-
-  &__toggle-label
-    height 44px
-    left 0
-    position absolute
-    width 44px
-
-    svg
-      left 0
-      position absolute
-      top 0
-      transition transform $duration
-      z-index 2
-
-      &:nth-of-type(2)
-        left $width
-        transform scale(0)
-
-  &__toggle
-    opacity 0
-    position fixed
-
-    &:checked ~ .menu__toggle-label
-      background rgba(0, 0, 0, 0.65)
-      height 100vh
-      left 0
-      position fixed
-      top 0
-      transition background $duration
-      width 100vw
-
-      svg:nth-of-type(1)
-        transform scale(0)
-
-      svg:nth-of-type(2)
-        left $width
-        transform scale(1)
-        transition transform $duration
-        transition-delay $borderDelay + $delayStep
-
-    &:checked ~ .menu__content
-      transform translate(100%, 0)
-
-      .menu-item
-        transform translateX(0)
-        transition transform $duration cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color $duration
-
-        $colors = #1E2F23 #34623F #607744 #1DD3B0 #FFBD00
-        for $item in (1..5)
-          &:nth-of-type({$item})
-
-
-            a[href]:after
-              background $colors[$item - 1]
-
-            border-color $colors[$item - 1]
-        &:nth-of-type(1)
-          transition-delay ($baseDelay), $borderDelay
-        &:nth-of-type(2)
-          transition-delay ($baseDelay + $delayStep), $borderDelay
-        &:nth-of-type(3)
-          transition-delay ($baseDelay + (2 * $delayStep)), $borderDelay
-          .menu-item
-            &:nth-of-type(1)
-              transition-delay ($baseDelay + (3 * $delayStep)), $borderDelay
-            &:nth-of-type(2)
-              transition-delay ($baseDelay + (4 * $delayStep)), $borderDelay
-            &:nth-of-type(3)
-              transition-delay ($baseDelay + (5 * $delayStep)), $borderDelay
-        &:nth-of-type(4)
-          transition-delay ($baseDelay + (6 * $delayStep)), $borderDelay
-          .menu-item
-            &:nth-of-type(1)
-              transition-delay ($baseDelay + (7 * $delayStep)), $borderDelay
-            &:nth-of-type(2)
-              transition-delay ($baseDelay + (8 * $delayStep)), $borderDelay
-            &:nth-of-type(3)
-              transition-delay ($baseDelay + (9 * $delayStep)), $borderDelay
-        &:nth-of-type(5)
-          transition-delay ($baseDelay + (10 * $delayStep)), $borderDelay
-
-$itemSize = 44px
-.menu__content > .menu-item
-  border-left 8px solid transparent
-  > a
-    line-height $itemSize
-    min-width 60px
-
-.sub-menu
-  padding 0 0 0 $itemSize
-
-.menu-item
-  line-height $itemSize
-  min-height $itemSize
-  padding 0 12px
-  transform translateX(-100%)
-
-  .menu-item
-    transform translateX(-150%)
       </style>
 
       <nav class="menu">
