@@ -30,11 +30,11 @@ class Header extends HTMLElement {
           box-shadow: inset 0 -2px 0 0 #fff;
         }
 
-        li {
+        ul {
          display: inline;
         }
       </style>
-      
+
       <header>
         <nav>
             <ul>
