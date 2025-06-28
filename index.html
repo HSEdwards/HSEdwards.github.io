@@ -5,25 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
   </head>
 
 <body>
-    <header-component></header-component>
-    <section>
+    <header id="header">
+        <nav class="nav">
+            <button class="toggle-menu">
+            <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div id="menu" class="">
+        <nav class="main-nav">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Portfolio</a></li>
+            <li><a href="neurodivergent.html">Accomidations</a></li>
+            <li><a href="expectations.html">What to Expect</a></li>
+            </ul>
+        </nav>
+        
+        <footer class="menu-footer">
+            <nav class="footer-nav">
+            <ul>
+                <li>
+                <a href="#">
+                    <i class="fa fa-twitter fa-fw"></i>
+                    Twitter
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <i class="fa fa-envelope fa-fw"></i>
+                    Subscribe
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div>
+        <section>
         <h1>Tip to Tails Tailoring</h1>
         <p>Providing comfort and quality since minutes ago!</p>
-    </section>
-    <section>
-        <h2>Hours</h2>
-        <p>Weekdays</p>
-        <p>6:00 am - 8:30am, 7:00pm - 9:00pm</p>
-        <p>Saturday & Sunday by Appointment Only</p>
-    </section>
-    <section>
-    <p>This website is being built by a very confused data analyst who is just getting her sea legs under her.</p>
-    </section>
+        </section>
+        <section>
+            <h2>Hours</h2>
+            <p>Weekdays</p>
+            <p>6:00 am - 8:30am, 7:00pm - 9:00pm</p>
+            <p>Saturday & Sunday by Appointment Only</p>
+        </section>
+        <section>
+        <p>This website is being built by a very confused data analyst who is just getting her sea legs under her.</p>
+        </section>
+    </div>
+    
     <footer-component></footer-component>
 </body>
   
