@@ -5,10 +5,8 @@ class Header extends HTMLElement {
 
   connectedCallback() {    
     this.innerHTML = `
-    <sytle>
-       
-
-        body {
+    <style>
+          body {
         font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
         background: radial-gradient(circle, #322538, #1f1f1f);
         font-size: 13px;
