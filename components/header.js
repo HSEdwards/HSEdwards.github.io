@@ -7,8 +7,6 @@ class Header extends HTMLElement {
     this.innerHTML = `
     <style>
     // Some base styles
-    
-
     header {
     padding: 2rem;
     }
@@ -128,79 +126,79 @@ class Header extends HTMLElement {
 
     // Hamburger menu toggler stuff below
     .toggle-menu {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    height: $hamburger-height;
-    outline: none;
-    padding: 0;
-    pointer-events: initial;
-    position: relative;
-    vertical-align: middle;
-    width: $hamburger-width;
-    z-index: $hamburger-zindex;
-
-    span {
-        background-color: $hamburger-color;
-        content: "";
-        display: block;
-        height: 2px;
-        left: calc(50% - 13px);
-        position: absolute;
-        top: calc(50% - 1px);
-        transform-origin: 50% 50%;
-        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
-        transform 0.2s linear;
-        width: 26px;
-
-        &:before,
-        &:after {
-        background-color: $hamburger-color;
-        content: "";
-        display: block;
-        height: 2px;
-        position: absolute;
-        transform-origin: 50% 50%;
-        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
-            transform 0.2s linear;
-        width: 26px;
-        }
-
-        &:before {
-        top: 7px;
-        }
-
-        &:after {
-        top: -7px;
-        }
-    }
-
-    &.active {
-        span {
         background-color: transparent;
-        transition: background 0.2s ease-out;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        height: $hamburger-height;
+        outline: none;
+        padding: 0;
+        pointer-events: initial;
+        position: relative;
+        vertical-align: middle;
+        width: $hamburger-width;
+        z-index: $hamburger-zindex;
 
-        &:before,
-        &:after {
-            transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+        span {
+            background-color: $hamburger-color;
+            content: "";
+            display: block;
+            height: 2px;
+            left: calc(50% - 13px);
+            position: absolute;
+            top: calc(50% - 1px);
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+            transform 0.2s linear;
+            width: 26px;
+
+            &:before,
+            &:after {
+            background-color: $hamburger-color;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+                transform 0.2s linear;
+            width: 26px;
+            }
+
+            &:before {
+            top: 7px;
+            }
+
+            &:after {
+            top: -7px;
+            }
         }
 
-        &:before {
-            top: 0;
-            transform: rotate3d(0, 0, 1, -45deg);
-        }
+        &.active {
+            span {
+                background-color: transparent;
+                transition: background 0.2s ease-out;
 
-        &:after {
-            top: 0;
-            transform: rotate3d(0, 0, 1, 45deg);
+                &:before,
+                &:after {
+                    transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+                }
+
+                &:before {
+                    top: 0;
+                    transform: rotate3d(0, 0, 1, -45deg);
+                }
+
+                &:after {
+                    top: 0;
+                    transform: rotate3d(0, 0, 1, 45deg);
+                }
+            }
         }
-        }
-    }
     }
     </style>
-    
+
     <header id="header">
         <nav class="nav">
             <button class="toggle-menu">
@@ -212,22 +210,12 @@ class Header extends HTMLElement {
     <div id="menu" class="">
         <nav class="main-nav">
             <ul>
-            <li>
-                <a href="#">
-                About
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                Pricing
-                </a>
-            </li>
-            
-            <li>
-                <a href="#">
-                Contact
-                </a>
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Gallery.html">Portfolio</a></li>
+            <li><a href="neurodivergent.html">Accomidations</a></li>
+            <li><a href="expectations.html">What to Expect</a></li>
             </ul>
         </nav>
     
@@ -257,7 +245,7 @@ class Header extends HTMLElement {
 //@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
 $('.toggle-menu').click (function(){
   $(this).toggleClass('active');
-  $('#menu').toggleClass('open');
+  $(Header).toggleClass('open');
 });
 
 customElements.define('header-component', Header);
