@@ -6,7 +6,7 @@ class Header extends HTMLElement {
   connectedCallback() {    
     this.innerHTML = `
     <sytle>
-        @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+       
 
         body {
         font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -260,6 +260,7 @@ class Header extends HTMLElement {
   }
 }
 
+//@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
 $('.toggle-menu').click (function(){
   $(this).toggleClass('active');
   $('#menu').toggleClass('open');
