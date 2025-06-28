@@ -3,245 +3,266 @@ class Header extends HTMLElement {
     super();
   }
 
-  connectedCallback() {
+  connectedCallback() {    
     this.innerHTML = `
-      <style>@import url("https://fonts.googleapis.com/css?family=Lato");
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  padding: 0;
-}
-html:before,
-body:before {
-  background: linear-gradient(35deg, #34623F, #1DD3B0);
-  bottom: 0;
-  content: '';
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-}
-svg {
-  cursor: pointer;
-  height: 44px;
-  width: 44px;
-}
-svg path {
-  fill: #fff;
-}
-ol {
-  list-style-type: none;
-}
-a[href] {
-  color: #fff;
-  position: relative;
-  text-decoration: none;
-}
-a[href]:hover:after {
-  transform: scaleX(1);
-}
-a[href]:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  height: 4px;
-  background: #fff;
-  left: 0;
-  right: 0;
-  transition: transform 0.15s;
-  transform-origin: left;
-  transform: scaleX(0);
-}
-.menu {
-  position: relative;
-  width: 250px;
-}
-.menu__content {
-  color: #fff;
-  margin: 0;
-  padding: 0 0 25px 0;
-  position: absolute;
-  right: 100%;
-  top: 0;
-  width: 250px;
-  z-index: 2;
-}
-.menu__toggle-label {
-  height: 44px;
-  left: 0;
-  position: absolute;
-  width: 44px;
-}
-.menu__toggle-label svg {
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: transform 0.15s;
-  z-index: 2;
-}
-.menu__toggle-label svg:nth-of-type(2) {
-  left: 250px;
-  transform: scale(0);
-}
-.menu__toggle {
-  opacity: 0;
-  position: fixed;
-}
-.menu__toggle:checked ~ .menu__toggle-label {
-  background: rgba(0,0,0,0.65);
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  transition: background 0.15s;
-  width: 100vw;
-}
-.menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(1) {
-  transform: scale(0);
-}
-.menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(2) {
-  left: 250px;
-  transform: scale(1);
-  transition: transform 0.15s;
-  transition-delay: 0.925s;
-}
-.menu__toggle:checked ~ .menu__content {
-  transform: translate(100%, 0);
-}
-.menu__toggle:checked ~ .menu__content .menu-item {
-  transform: translateX(0);
-  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.15s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
-  border-color: #1E2F23;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) a[href]:after {
-  background: #34623F;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
-  border-color: #607744;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) a[href]:after {
-  background: #1DD3B0;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
-  border-color: #FFBD00;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) a[href]:after {
-  background: #1DD3B0;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
-  border-color: #607744;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) a[href]:after {
-  background: #34623F;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
-  border-color: #1E2F23;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) a[href]:after {
-  background: #FFBD00;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
-  transition-delay: 0.225s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
-  transition-delay: 0.275s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
-  transition-delay: 0.325s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(1) {
-  transition-delay: 0.375s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(2) {
-  transition-delay: 0.425s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(3) {
-  transition-delay: 0.475s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
-  transition-delay: 0.525s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(1) {
-  transition-delay: 0.575s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(2) {
-  transition-delay: 0.625s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(3) {
-  transition-delay: 0.675s, 0.875s;
-}
-.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
-  transition-delay: 0.725s, 0.875s;
-}
-.menu__content > .menu-item {
-  border-left: 8px solid transparent;
-}
-.menu__content > .menu-item > a {
-  line-height: 44px;
-  min-width: 60px;
-}
-.sub-menu {
-  padding: 0 0 0 44px;
-}
-.menu-item {
-  line-height: 44px;
-  min-height: 44px;
-  padding: 0 12px;
-  transform: translateX(-100%);
-}
-.menu-item .menu-item {
-  transform: translateX(-150%);
-}
+    <sytle>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
 
-      </style>
+        body {
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: radial-gradient(circle, #322538, #1f1f1f);
+        font-size: 13px;
+        }
 
-      <nav class="menu">
-  <input id ="menu__toggle" type="checkbox" class='menu__toggle'/>
-  <label for="menu__toggle" class="menu__toggle-label">
-    <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
-      <path d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' />
-    </svg>
-    <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
-      <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-    </svg>
-  </label>
-  <ol class='menu__content'>
-    <li class="menu-item"><a href="./index.html">Home</a></li>
-    <li class="menu-item"><a href="./about.html">About</a></li>
-    <li class="menu-item"><a href="./gallery.html">Gallery</a></li>
-    <li class="menu-item"><a href="./expectations.html">What to Expect</a></li>
-    <li class="menu-item"><a href="./neurodivergent.html">Neurodivergent Services</a></li>
-    <li class="menu-item"><a href="./contact.html">Contact</a></li>
-    <li class="menu-item">
-      <a href="#0">Widgets</a>
-      <ol class="sub-menu">
-        <li class="menu-item"><a href="#0">Big Widgets</a></li>
-        <li class="menu-item"><a href="#0">Bigger Widgets</a></li>
-        <li class="menu-item"><a href="#0">Huge Widgets</a></li>
-      </ol>
-    </li>
-    <li class="menu-item">
-      <a href="#0">Kabobs</a>
-      <ol class="sub-menu">
-        <li class="menu-item"><a href="#0">Shishkabobs</a></li>
-        <li class="menu-item"><a href="#0">BBQ kabobs</a></li>
-        <li class="menu-item"><a href="#0">Summer kabobs</a></li>
-      </ol>
-    </li>
-    <li class="menu-item"><a href="#0">Contact</a></li>
-  </ol>
-</nav>
+        #header {
+        padding: 2rem;
+        }
+
+        // It actually starts here
+
+        $menu-bg: #de4152;
+        $menu-color: #ffffff;
+        $menu-font-size: 2.5rem;
+        $menu-zindex: 1100;
+        $hamburger-color: #fff;
+        $hamburger-width: 50px;
+        $hamburger-height: 50px;
+        $hamburger-zindex: $menu-zindex + 10;
+
+        #menu {
+        background: $menu-bg;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        transition: all 0.7s ease-in-out;
+        // For some sweet fadez
+        visibility: hidden;
+        width: 100%;
+        z-index: $menu-zindex;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+
+            @for $i from 1 through 10 {
+            li:nth-child(#{$i}) {
+                animation-delay: $i * 0.1s;
+            }
+            }
+
+            li {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: fadeInUp;
+            }
+        }
+
+        ul {
+            &:hover {
+            a {
+                opacity: 0.5;
+            }
+            }
+
+            a {
+            // Stops it being a twitchy mess in chrome :pray:
+            // https://www.binarymoon.co.uk/2014/02/fixing-css-transitions-in-google-chrome/
+            -webkit-transform: translateZ(0);
+            transition: opacity 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+            }
+        }
+
+        .main-nav {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+            ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            }
+
+            a {
+            color: $menu-color;
+            display: block;
+            font-size: $menu-font-size;
+            font-weight: bold;
+            padding: 1rem 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:first {
+                padding-top: 0;
+            }
+            }
+        }
+
+        .menu-footer {
+            padding: 2rem;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+
+            ul {
+            display: inline-block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin: 0 1rem;
+            }
+            }
+
+            a {
+            color: $menu-color;
+            text-decoration: none;
+            text-transform: uppercase;
+            }
+        }
+        }
+
+        // Hamburger menu toggler stuff below
+        .toggle-menu {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        height: $hamburger-height;
+        outline: none;
+        padding: 0;
+        pointer-events: initial;
+        position: relative;
+        vertical-align: middle;
+        width: $hamburger-width;
+        z-index: $hamburger-zindex;
+
+        span {
+            background-color: $hamburger-color;
+            content: "";
+            display: block;
+            height: 2px;
+            left: calc(50% - 13px);
+            position: absolute;
+            top: calc(50% - 1px);
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+            transform 0.2s linear;
+            width: 26px;
+
+            &:before,
+            &:after {
+            background-color: $hamburger-color;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+                transform 0.2s linear;
+            width: 26px;
+            }
+
+            &:before {
+            top: 7px;
+            }
+
+            &:after {
+            top: -7px;
+            }
+        }
+
+        &.active {
+            span {
+            background-color: transparent;
+            transition: background 0.2s ease-out;
+
+            &:before,
+            &:after {
+                transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+            }
+
+            &:before {
+                top: 0;
+                transform: rotate3d(0, 0, 1, -45deg);
+            }
+
+            &:after {
+                top: 0;
+                transform: rotate3d(0, 0, 1, 45deg);
+            }
+            }
+        }
+        }
+
+
+    </style>
+        <header id="header">
+            <nav class="nav">
+                <button class="toggle-menu">
+                <span></span>
+                </button>
+            </nav>
+            </header>
+
+            <div id="menu" class="">
+            <nav class="main-nav">
+                <ul>
+                <li>
+                    <a href="#">
+                    About
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    Pricing
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                    Contact
+                    </a>
+                </li>
+                </ul>
+            </nav>
+            
+            <footer class="menu-footer">
+                <nav class="footer-nav">
+                <ul>
+                    <li>
+                    <a href="#">
+                        <i class="fa fa-twitter fa-fw"></i>
+                        Twitter
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-fw"></i>
+                        Subscribe
+                    </a>
+                    </li>
+                </ul>
+                </nav>
+            </footer>
+            </div>
     `;
   }
 }
+
+$('.toggle-menu').click (function(){
+  $(this).toggleClass('active');
+  $('#menu').toggleClass('open');
+});
 
 customElements.define('header-component', Header);
