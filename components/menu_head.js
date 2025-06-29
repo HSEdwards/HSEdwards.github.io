@@ -4,18 +4,10 @@ class menu_head extends HTMLElement {
   }
 
   connectedCallback() {
-    this.innerHTML = `
-      <style>
-        footer {
-          font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-          background:  #34623F;
-          font-size: 13px;
-        }
-      </style>
-      
+    this.innerHTML = `      
       <header id="header">
             <nav class="nav">
-                <button class="toggle-menu">
+                <button class="toggle-menu" onclick="menuFunction()">
                 <span></span>
                 </button>
             </nav>
