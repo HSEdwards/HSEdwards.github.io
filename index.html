@@ -1,43 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
-    <script src="components/footer.js" type="text/javascript" defer></script>
-  </head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="components/menu_head.js" type="text/javascript" defer></script>
+    </head>
 
 <body>
-    <header id="header">
-        <nav class="nav">
-            <button class="toggle-menu" onclick="menuFunction()">
-                <script>
-                    function menuFunction(){  
-                        var m = document.getElementById("menu");
-                        m.style.visibility = "visible"
-                        m.style.opacity = 1
-                    }
-                </script>
-            <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <div id="menu" class="">
-        <nav class="main-nav">
-            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Portfolio</a></li>
-            <li><a href="neurodivergent.html">Accomidations</a></li>
-            <li><a href="expectations.html">What to Expect</a></li>
-            </ul>
-        </nav>
-    </div>
-
+    <menu_head-component></menu_head-component>
     <div>
         <section>
         <h1>Tip to Tails Tailoring</h1>
@@ -52,8 +26,7 @@
         <section>
         <p>This website is being built by a very confused data analyst who is just getting her sea legs under her.</p>
         </section>
-    </div>
-    
+    </div>    
     <footer-component></footer-component>
 </body>
   
