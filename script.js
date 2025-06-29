@@ -1,4 +1,4 @@
 $("toggle-menu").click(function () {
-  $(this).toggleClass("active");
+  //$(this).toggleClass("active");
   $("#menu").toggleClass("open");
 });
