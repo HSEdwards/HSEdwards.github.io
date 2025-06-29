@@ -1,5 +1,5 @@
-$("toggle-menu").click(function () {
-  //$(this).toggleClass("active");
-  $("#menu").toggleClass("open");
-});
-
+function menuFunction(){  
+  var m = document.getElementById("menu");
+  m.style.visibility = "visible"
+  m.style.opacity = 1
+}
