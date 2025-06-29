@@ -37,4 +37,4 @@ class menu_head extends HTMLElement {
   }
 }
 
-customElements.define('menu-component', Header);
+customElements.define('menu-component', menu_head);

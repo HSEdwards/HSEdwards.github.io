@@ -12,7 +12,12 @@
 <body>
     <header id="header">
         <nav class="nav">
-            <button class="toggle-menu">
+            <button class="toggle-menu" onclick="menuFunction()">
+                <script>
+                    function myFunction(){   
+                       ("#menu").toggleClass("open");
+                    }
+                </script>
             <span></span>
             </button>
         </nav>
