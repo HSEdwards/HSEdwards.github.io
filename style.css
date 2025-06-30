@@ -279,7 +279,7 @@ p {
 #image_gallery p {
   height: 200px;
   width: 500px;
-  margin: 75px auto;
+  margin: 175px auto;
   position: relative;
 }
 
@@ -294,7 +294,7 @@ p {
 }
 
 #image_gallery img:hover {
-  transform: scale(5);
+  transform: scale(3);
   /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
   offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
   box-shadow: 3px 4px 10px #0006;
