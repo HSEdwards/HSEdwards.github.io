@@ -216,6 +216,7 @@ p {
   li {
     position: relative;
     cursor: pointer;
+    margin-left: 0px;
     .overlay {
       opacity: 0.4;
       background: #000;
@@ -278,12 +279,12 @@ p {
 #image_gallery p {
   height: 200px;
   width: 500px;
-  margin: 100px auto;
+  margin: 75px auto;
   position: relative;
 }
 
 #image_gallery img {
-  height: 100px;
+  height: 150px;
   position: absolute;
   left: 0;
   offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
@@ -293,7 +294,7 @@ p {
 }
 
 #image_gallery img:hover {
-  transform: scale(3);
+  transform: scale(5);
   /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
   offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
   box-shadow: 3px 4px 10px #0006;
