@@ -246,7 +246,7 @@ p {
       position: relative;
       width: 100%;
       z-index: 999;
-      color: #fff;
+      color: MintCream;
       display: block;
       text-align: center;
       padding: 30px 20px 20px;
@@ -264,7 +264,7 @@ p {
         line-height: 30px;
         display: inline-block;
         padding: 0 10px;
-        border: 1px solid #fff;
+        border: 1px solid MintCream;
         font-size: 14px;
         text-transform: uppercase;
         text-decoration: none;
