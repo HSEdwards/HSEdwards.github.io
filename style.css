@@ -33,6 +33,18 @@ h1:hover {
   letter-spacing: 1px;
 }
 
+h2 {
+  font-size: 75px;
+  font-family: "Gambetta", serif;
+  letter-spacing: 0.5px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 200;
+  margin-bottom: 0.8rem;
+  color: #ffbb00;
+  outline: none;
+  text-align: center;
+}
+
 p {
   font-size: 1.2em;
   line-height: 150%;
