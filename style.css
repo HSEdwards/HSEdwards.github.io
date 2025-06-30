@@ -146,12 +146,12 @@ p {
 }
 
 .toggle-menu {
-  background-color: #34623F;
+  background-color: #163e20;
   border: none;
   cursor: pointer;
   display: inline-block;
   /*float: right;*/
-  height: 100px;
+  height: 50px;
   outline: none;
   padding: 0;
   pointer-events: initial;
