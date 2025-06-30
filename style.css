@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
 body {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #34623F;
+  background: #163e20;
   font-size: 13px;
 }
 
@@ -12,6 +12,33 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* heading */
+h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-family: "Gambetta", serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: #FFBD00;
+  outline: none;
+  text-align: center;
+}
+
+h1:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: 0.5px;
 }
 
 /* menu extravaganza */
@@ -123,7 +150,7 @@ body {
   border: none;
   cursor: pointer;
   display: inline-block;
-  float: right;
+  /*float: right;*/
   height: 100px;
   outline: none;
   padding: 0;
@@ -177,34 +204,6 @@ body {
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
-
-
-/* heading */
-h1 {
-  font-size: 100px;
-  text-transform: uppercase;
-  font-family: "Gambetta", serif;
-  letter-spacing: -3px;
-  transition: 700ms ease;
-  font-variation-settings: "wght" 311;
-  margin-bottom: 0.8rem;
-  color: #FFBD00;
-  outline: none;
-  text-align: center;
-}
-
-h1:hover {
-  font-variation-settings: "wght" 582;
-  letter-spacing: 1px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 150%;
-  text-align: center;
-  color: MintCream;
-  letter-spacing: 0.5px;
-}
 
 /*services drop down thing */
 #services body {
@@ -341,6 +340,6 @@ p {
 #image_gallery img:nth-last-child(2):nth-child(4) {
   offset-distance: 75%;
 }
-#image_gallery img:last-child:nth-child(5) {
+img:last-child:nth-child(5) {
   offset-distance: 100%;
 }
