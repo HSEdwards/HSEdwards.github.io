@@ -214,6 +214,8 @@ p {
   width: 100%;
   overflow: hidden;
   li {
+    list-style-type: none;
+    display:inline-block;
     position: relative;
     cursor: pointer;
     margin-left: 0px;
