@@ -124,7 +124,7 @@ body {
   z-index: 1110;
 }
 .toggle-menu span {
-  background-color: #000000;
+  background-color: #FFBD00;
   content: "";
   display: block;
   height: 2px;
@@ -136,7 +136,7 @@ body {
   width: 26px;
 }
 .toggle-menu span:before, .toggle-menu span:after {
-  background-color: #1DD3B0;
+  background-color: #FFBD00;
   content: "";
   display: block;
   height: 2px;
@@ -165,4 +165,39 @@ body {
 .toggle-menu.active span:after {
   top: 0;
   transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 120px;
+  text-transform: uppercase;
+  font-family: "Gambetta", serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: #FFBD00;
+  outline: none;
+  text-align: center;
+}
+
+h1:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: 0.5px;
 }
