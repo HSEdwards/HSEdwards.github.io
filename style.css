@@ -292,8 +292,8 @@ p {
 /*image gallery*/
 #image_gallery p {
   height: 200px;
-  width: 500px;
-  margin: 175px auto;
+  width: 800px;
+  margin: 200px auto;
   position: relative;
 }
 
@@ -414,7 +414,7 @@ img:last-child:nth-child(5) {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 4px 13px;
-    color: #fff;
+    color: MintCream;
     background: #163e20;
     border: 1px solid transparent;
     font-size: 11px;
