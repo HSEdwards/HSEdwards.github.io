@@ -5,6 +5,16 @@ body {
   font-size: 13px;
 }
 
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* menu extravaganza */
 #header {
   padding: 2rem;
 }
@@ -167,17 +177,11 @@ body {
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
+
+/* heading */
 h1 {
-  font-size: 120px;
+  font-size: 100px;
   text-transform: uppercase;
   font-family: "Gambetta", serif;
   letter-spacing: -3px;
@@ -202,116 +206,71 @@ p {
   letter-spacing: 0.5px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lustria|Lato:300);
-#services {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-#services .html {
-  line-height: 1;
-}
-
-#services .ol, ul {
-  list-style: none;
-}
-
-#services .table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-#services .caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-#services .q, #services .blockquote {
-  quotes: none;
-}
-#services .q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-#services .a img {
-  border: none;
-}
-
-#services .article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-#services .body {
+/*services drop down thing */
+#services body {
   overflow-x: hidden;
 }
 
-#services .ul {
+#services ul {
   width: 100%;
   overflow: hidden;
-}
-#services .ul li {
-  position: relative;
-  cursor: pointer;
-}
-#services .ul li .overlay {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-  opacity: 0.4;
-  background: #000;
-  display: blocK;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 8;
-}
-#services .ul li .info {
-  position: relative;
-  width: 100%;
-  z-index: 999;
-  color: MintCream;
-  display: block;
-  text-align: center;
-  padding: 30px 20px 20px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#services .ul li .info h2 {
-  font-family: "Lustria", serif;
-  font-size: 30px;
-  line-height: 50px;
-}
-#services .ul li .info p {
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  padding-bottom: 20px;
-}
-#services .ul li .info .btn {
-  line-height: 30px;
-  display: inline-block;
-  padding: 0 10px;
-  border: 1px solid MintCream;
-  font-size: 14px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: MintCream;
-  font-family: "Lato", sans-serif;
-  margin-bottom: 20px;
-}
-#services .ul li .info .description {
-  display: none;
-}
-#services .ul li .bg-img img {
-  position: absolute;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
+  li {
+    position: relative;
+    cursor: pointer;
+    .overlay {
+      opacity: 0.4;
+      background: #000;
+      display: blocK;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 8;
+    }
+    .info {
+      position: relative;
+      width: 100%;
+      z-index: 999;
+      color: #fff;
+      display: block;
+      text-align: center;
+      padding: 30px 20px 20px;
+      box-sizing: border-box;
+      h2 {
+        font-size: 30px;
+        line-height: 50px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 20px;
+      }
+      .btn {
+        line-height: 30px;
+        display: inline-block;
+        padding: 0 10px;
+        border: 1px solid #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .description {
+        display: none;
+      }
+    } 
+
+    .bg-img {
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+  }
 }
