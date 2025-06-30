@@ -364,21 +364,21 @@ img:last-child:nth-child(5) {
   opacity: 0;
 }
 
-#contactForm .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+#contact-form .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
   padding: 0 20% 0 20%;
 }
 
-#contactForm .margin-top-25 {
+#contact-form .margin-top-25 {
   margin-top: 25px;
 }
 
-#contactForm .form-title {
+#contact-form .form-title {
   padding: 25px;
   font-size: 30px;
   font-weight: 300;
 }
 
-#contactForm .form-group .form-control {
+#contact-form .form-group .form-control {
   -webkit-box-shadow: none;
   border-bottom: 1px;
   border-style: none none solid none;
@@ -386,30 +386,30 @@ img:last-child:nth-child(5) {
   border-color: #1DD3B0;
 }
 
-#contactForm .form-group .form-control:focus {
+#contact-form .form-group .form-control:focus {
 	box-shadow: none;
   border-width: 0 0 2px 0;
   border-color: #1DD3B0;
   
 }
 
-#contactForm textarea {
+#contact-form textarea {
   resize: none;
 }
 
-#contactForm .btn-mod.btn-large {
+#contact-form .btn-mod.btn-large {
     height: auto;
     padding: 13px 52px;
     font-size: 15px;
 }
 
-#contactForm .btn-mod.btn-border {
+#contact-form .btn-mod.btn-border {
     color: #1DD3B0;
     border: 1px solid #1DD3B0;
     background: transparent;
 }
 
-#contactForm .btn-mod, #contactForm a.btn-mod {
+#contact-form .btn-mod, #contactForm a.btn-mod {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -435,8 +435,8 @@ img:last-child:nth-child(5) {
     transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
-#contactForm .btn-mod.btn-border:hover, #contactForm .btn-mod.btn-border:active,
-#contactForm .btn-mod.btn-border:focus, #contactForm .btn-mod.btn-border:active:focus {
+#contact-form .btn-mod.btn-border:hover, #contact-form .btn-mod.btn-border:active,
+#contact-form .btn-mod.btn-border:focus, #contact-form .btn-mod.btn-border:active:focus {
     color: #1DD3B0;
     border-color: #1DD3B0;
     background: #163e20;
@@ -444,12 +444,12 @@ img:last-child:nth-child(5) {
 }
 
 @media only screen and (max-width: 500px) {
-    #contactForm .btn-mod.btn-large {
+    #contact-form .btn-mod.btn-large {
        padding: 6px 16px;
        font-size: 11px;
     }
   
-    #contactForm form-title {
+    #contact-form form-title {
         font-size: 20px;
   }
 }
