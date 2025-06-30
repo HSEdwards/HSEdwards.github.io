@@ -295,6 +295,8 @@ p {
   width: 800px;
   margin: 200px auto;
   position: relative;
+  justify-content: center;
+  align-items: stretch;
 }
 
 #image_gallery img {
