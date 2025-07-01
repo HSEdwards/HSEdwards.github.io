@@ -226,8 +226,7 @@ p {
   width: 100%;
   overflow: hidden;
   li {
-    list-style-type: none;
-    display:inline-block;
+    display:table-column-group;
     position: relative;
     cursor: pointer;
     margin-left: 0px;
