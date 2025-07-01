@@ -327,7 +327,7 @@ p {
   object-fit:contain;
 }
 
-#image_gallery #image_gallery .ts {/*thumbnails bar*/
+#image_gallery .ts {/*thumbnails bar*/
   perspective:100px;
   perspective-origin:center center;
   transform-style:preserve-3d;
