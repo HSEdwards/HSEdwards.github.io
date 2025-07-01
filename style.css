@@ -225,8 +225,8 @@ p {
 #services ul {
   width: 100%;
   overflow: hidden;
+  list-style-type: none;
   li {
-    display:table-column-group;
     position: relative;
     cursor: pointer;
     margin-left: 0px;
