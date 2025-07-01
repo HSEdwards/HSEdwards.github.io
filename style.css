@@ -1,4 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+@import "compass/css3";
+
+@import "compass/reset/utilities";
+
+@include global-reset;
+
+@import url(https://fonts.googleapis.com/css?family=Lustria|Lato:300);
+
 body {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #163e20;
@@ -218,23 +226,16 @@ p {
 
 
 /*services drop down thing */
-#services body {
+body {
   overflow-x: hidden;
 }
 
-#services body {
-  overflow-x: hidden;
-}
-
-#services ul {
+ul {
   width: 100%;
   overflow: hidden;
-  list-style-type: none;
-  #services li {
+  li {
     position: relative;
     cursor: pointer;
-    margin-left: 0px;
-    left: 0px;
     .overlay {
       opacity: 0.4;
       background: #000;
@@ -242,22 +243,23 @@ p {
       width: 100%;
       height: 100%;
       top: 0;
-      
+      left: 0;
       position: absolute;
       z-index: 8;
+      
     }
     .info {
       position: relative;
       width: 100%;
       z-index: 999;
-      color: MintCream;
+      color: #fff;
       display: block;
-      text-align: center;
+      text-align:center;
       padding: 30px 20px 20px;
-      box-sizing: border-box;
+      box-sizing:border-box;
       h2 {
         font-size: 30px;
-        line-height: 50px;
+        line-height: 50px; 
       }
       p {
         font-size: 18px;
@@ -265,27 +267,27 @@ p {
         padding-bottom: 20px;
       }
       .btn {
-        line-height: 30px;
-        display: inline-block;
-        padding: 0 10px;
-        border: 1px solid MintCream;
-        font-size: 14px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: MintCream;
-        margin-bottom: 20px;
+       line-height: 30px;
+       display: inline-block;
+       padding: 0 10px;
+       border: 1px solid #fff;
+       font-size: 14px;
+       text-transform: uppercase;
+       text-decoration: none;
+       color: #fff;
+       margin-bottom: 20px;
       }
       .description {
         display: none;
       }
-    } 
-
+    }
+    
     .bg-img {
       img {
         position: absolute;
         width: 100%;
         height: auto;
-        top: 0;
+        top:0;
         min-width: 100%;
         min-height: 100%;
       }
