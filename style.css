@@ -267,7 +267,7 @@ p {
         font-size: 14px;
         text-transform: uppercase;
         text-decoration: none;
-        color: #fff;
+        color: MintCream;
         margin-bottom: 20px;
       }
       .description {
@@ -291,7 +291,7 @@ p {
 /*image gallery*/
 #image_gallery p {
   height: 200px;
-  width: 800px;
+  width: 190%;
   margin: 200px auto;
   position: relative;
   justify-content: center;
@@ -326,7 +326,7 @@ p {
   offset-distance: 49%;
 }
 #image_gallery img:last-child:nth-child(3) {
-  offset-distance: 81%;
+  offset-distance: 100%;
 }
 
 /* 4 images */
@@ -340,7 +340,7 @@ p {
   offset-distance: 65%;
 }
 #image_gallery img:last-child:nth-child(4) {
-  offset-distance: 90%;
+  offset-distance: 100%;
 }
 
 /* 5 images */
