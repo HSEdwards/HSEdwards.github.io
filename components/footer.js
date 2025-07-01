@@ -8,6 +8,7 @@ class Footer extends HTMLElement {
       <style>
         footer {
           height: 100%;
+          width: 100%;
           background: radial-gradient(circle, #34623F, #FFBD00);
           font-size: 13px;
         }
