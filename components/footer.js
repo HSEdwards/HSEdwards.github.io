@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
     this.innerHTML = `
       <style>
         footer {
-          font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+          height: 100%;
           background: radial-gradient(circle, #34623F, #FFBD00);
           font-size: 13px;
         }
