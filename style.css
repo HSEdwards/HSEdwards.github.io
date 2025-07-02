@@ -61,6 +61,14 @@ p {
   letter-spacing: 0.5px;
 }
 
+a {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: 0.5px;
+}
+
 /* menu extravaganza */
 #header {
   padding: 2rem;
@@ -233,6 +241,7 @@ body {
 ul {
   width: 100%;
   overflow: hidden;
+  list-style-type: none;
   li {
     position: relative;
     cursor: pointer;
