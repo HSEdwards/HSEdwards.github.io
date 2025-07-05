@@ -242,6 +242,7 @@ ul {
   width: 100%;
   overflow: hidden;
   list-style-type: none;
+  left: 0;
   li {
     position: relative;
     cursor: pointer;
@@ -252,7 +253,7 @@ ul {
       width: 100%;
       height: 100%;
       top: 0;
-      left: 0;
+      
       position: absolute;
       z-index: 8;
       
@@ -305,63 +306,34 @@ ul {
 }
 
 /* image gallery */
-#image_gallery .w {
-  width:100vmin;
-  height:80vmin;
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+img {
+    max-height: 15rem;
+    max-width: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-#image_gallery .ts {
-  width:100%; height:100%;
-  position:relative;
-  --barH:10%;/*active zone height = 100% - barH*/
+/* image layout code here */
+#gallery section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-#image_gallery .t {
-  --w:20%;
-  display:block; width:var(--w); height:var(--barH);
-  position:absolute; bottom:0; left:var(--l);
-  transform-origin:top left;
+/*Thats all you need to layout the gallery with flexbox */
+#gallery div {
+    padding-top: 2rem;
 }
 
-#image_gallery .t img {
-  display:block; width:100%; height:100%;
-  object-fit:cover;
-  transform:scale(0.8);
-}
-
-[type="radio"] { 
-  display:none; 
-}
-
-:checked + label.t {
-  left:0; bottom:var(--barH);
-  height:calc(100% - var(--barH));
-}
-
-:checked + #image_gallery label.t img {
-  object-fit:contain;
-}
-
-#image_gallery .ts {/*thumbnails bar*/
-  perspective:100px;
-  perspective-origin:center center;
-  transform-style:preserve-3d;
-  pointer-events:none;
-}
-
-:not(:checked) + #image_gallery .t {/*inactive labels*/
-  transform:translate3d(0, 0, -5px);
-  pointer-events:auto;
-}
-
-:not(:checked) + #image_gallery .t:hover {
-  transform:translate3d(0, -7px, -5px);
-  box-shadow:0 30px 30px -25px rgba(0,0,0,0.3);
-  cursor:pointer;
-}
-
-:not(:checked) + #image_gallery .t img {
-  transform:scale(0.9);/*create gaps*/
+#gallery div:last-child {
+    padding-bottom: 2rem;
 }
 
 
