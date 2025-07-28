@@ -38,7 +38,7 @@ h1 {
 
 h1:hover {
   font-variation-settings: "wght" 582;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 h2 {
@@ -48,7 +48,7 @@ h2 {
   transition: 700ms ease;
   font-variation-settings: "wght" 200;
   margin-bottom: 0.8rem;
-  color: #ffbb00;
+  color: #13916f;
   outline: none;
   text-align: center;
 }
@@ -240,9 +240,10 @@ body {
 
 #services ul {
   width: 100%;
+  position: fixed;
   overflow: hidden;
   list-style-type: none;
-  left: 0;
+  left: -10;
   li {
     position: relative;
     cursor: pointer;
