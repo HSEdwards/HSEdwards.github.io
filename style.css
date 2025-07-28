@@ -240,10 +240,9 @@ body {
 
 #services ul {
   width: 100%;
-  position: fixed;
   overflow: hidden;
   list-style-type: none;
-  left: -10;
+  left: 0;
   li {
     position: relative;
     cursor: pointer;
