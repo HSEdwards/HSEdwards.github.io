@@ -234,10 +234,6 @@ a {
 
 
 /*services drop down thing */
-body {
-  overflow-x: hidden;
-}
-
 #services ul {
   width: 100%;
   overflow: hidden;
