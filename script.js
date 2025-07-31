@@ -4,6 +4,15 @@ function menuFunction(){
   m.style.opacity = 1
 }
 
+$("#lightSlider").lightSlider({
+  gallery: true,
+  item: 1,
+  loop: true,
+  slideMargin: 0,
+  thumbItem: 9
+});
+
+/*
 const els = document.querySelectorAll("[type='radio']");
 for (const el of els)
   el.addEventListener("input", e => reorder(e.target, els));
@@ -25,6 +34,8 @@ function reorder(targetEl, els) {
     }
   }
 }
+*/
+
 
 
 
