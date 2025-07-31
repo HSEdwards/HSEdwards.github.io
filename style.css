@@ -206,7 +206,7 @@ a {
   display: block;
   height: 2px;
   position: absolute;
-  transform-origin: 50% 50%;
+  /*transform-origin: 50% 50%;*/
   transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
   width: 26px;
 }
@@ -235,10 +235,10 @@ a {
 
 /*services drop down thing */
 #services ul {
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   list-style-type: none;
-  left: 0;
+  left: -5;
   li {
     position: relative;
     cursor: pointer;
