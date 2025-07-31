@@ -235,10 +235,11 @@ a {
 
 /*services drop down thing */
 #services ul {
-  width: 90%;
+  width: 100%;
   overflow: hidden;
   list-style-type: none;
-  left: -5;
+  list-style: none;
+  padding-left: 0;
   li {
     position: relative;
     cursor: pointer;
