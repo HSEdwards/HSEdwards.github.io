@@ -9,7 +9,7 @@
 
 body {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #163e20;
+  background: #00510B;
   font-size: 13px;
 }
 
@@ -31,7 +31,7 @@ h1 {
   transition: 700ms ease;
   font-variation-settings: "wght" 311;
   margin-bottom: 0.8rem;
-  color: #FFBD00;
+  color: #E6C229;
   outline: none;
   text-align: center;
 }
@@ -48,7 +48,7 @@ h2 {
   transition: 700ms ease;
   font-variation-settings: "wght" 200;
   margin-bottom: 0.8rem;
-  color: #13916f;
+  color: #12B149;
   outline: none;
   text-align: center;
 }
@@ -75,7 +75,7 @@ a {
 }
 
 #menu {
-  background: #34623F;
+  background: #24652d;
   height: 100%;
   left: 0;
   opacity: 0;
@@ -161,7 +161,7 @@ a {
   padding: 0;
 }
 #menu .main-nav a {
-  color: #FFBD00;
+  color: #E6C229;
   display: block;
   font-size: 2.5rem;
   font-weight: bold;
@@ -174,7 +174,7 @@ a {
 }
 
 .toggle-menu {
-  background-color: #163e20;
+  /*background-color: #00680e;*/
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -201,7 +201,7 @@ a {
   width: 26px;
 }
 .toggle-menu span:before, .toggle-menu span:after {
-  background-color: #FFBD00;
+  /*background-color: #FFBD00;*/
   content: "";
   display: block;
   height: 2px;
@@ -245,7 +245,7 @@ a {
     cursor: pointer;
     .overlay {
       opacity: 0.4;
-      background: #000;
+      /*background: #000;*/
       display: blocK;
       width: 100%;
       height: 100%;
@@ -259,7 +259,7 @@ a {
       position: relative;
       width: 100%;
       z-index: 999;
-      color: #fff;
+      color: Mintcream;
       display: block;
       text-align:center;
       padding: 30px 20px 20px;
