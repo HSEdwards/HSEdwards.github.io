@@ -44,7 +44,6 @@ h2 {
   font-size: 75px;
   font-family: "Gambetta", serif;
   letter-spacing: 0.5px;
-  font-variation-settings: "wght" 200;
   margin-bottom: 0.8rem;
   color: #12B149;
   outline: none;
@@ -55,7 +54,6 @@ h3 {
   font-size: 50px;
   font-family: "Gambetta", serif;
   letter-spacing: 0.5px;
-  font-variation-settings: "wght" 200;
   margin-bottom: 0.8rem;
   color: #000000;
   outline: none;
@@ -86,6 +84,10 @@ p {
   text-align: center;
   color: MintCream;
   letter-spacing: 0.5px;
+}
+
+#toDo_list p {
+  color: rgb(0, 0, 0);
 }
 
 a {
@@ -228,7 +230,7 @@ a {
   width: 26px;
 }
 .toggle-menu span:before, .toggle-menu span:after {
-  /*background-color: #FFBD00;*/
+  background-color: #FFBD00;
   content: "";
   display: block;
   height: 2px;
@@ -453,22 +455,21 @@ a {
 	box-sizing: border-box;
 }
 
-body {
+#toDo_list body {
 	--h: 212deg;
 	--l: 43%;
 	--brandColor: hsl(var(--h), 71%, var(--l));
 	font-family: Montserrat, sans-serif;
 	margin: 0;
-	background-color: whitesmoke;
 }
 
-ol {
+#toDo_list ol {
 	list-style: none;
 	counter-reset: list;
 	padding: 0 1rem;
 }
 
-li {
+#toDo_list li {
 	--stop: calc(100% / var(--length) * var(--i));
 	--l: 62%;
 	--l2: 88%;
@@ -478,16 +479,16 @@ li {
 
 	position: relative;
 	counter-increment: list;
-	max-width: 45rem;
+	max-width: 60rem;
 	margin: 2rem auto;
 	padding: 2rem 1rem 1rem;
 	box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
 	border-radius: 0.25rem;
 	overflow: hidden;
-	background-color: white;
+	background-color: #12B149;
 }
 
-li::before {
+#toDo_list li::before {
 	content: "";
 	display: block;
 	width: 100%;
@@ -503,17 +504,17 @@ li::before {
 }
 
 @media (min-width: 40em) {
-	li {
+	#toDo_list li {
 		margin: 3rem auto;
 		padding: 3rem 2rem 2rem;
 	}
 
-	h3 {
+	#toDo_list h3 {
 		font-size: 2.25rem;
 		margin: 0 0 2rem;
 	}
 
-	h3::before {
+	#toDo_list h3::before {
 		margin-right: 1.5rem;
 	}
 }
