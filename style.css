@@ -303,25 +303,25 @@ a {
 }
 
 /* image gallery */
-.demo {
+#lightSlider.demo {
   width: 450px;
   float: center;
   justify-content: center;
 }
-ul {
+#lightSlider ul {
   list-style: none outside none;
   padding-left: 100;
   margin-bottom: 0;
   justify-content: center;
 }
-li {
+#lightSlider li {
   justify-content: center;
   display: block;
   float: center;
   margin-right: 6px;
   cursor: pointer;
 }
-img {
+#lightSlider img {
   justify-content: center;
   display: block;
   height: auto;
