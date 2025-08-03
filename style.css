@@ -451,7 +451,7 @@ a {
 
 
 /* what to expect */
-* {
+#toDo_list * {
 	box-sizing: border-box;
 }
 
@@ -459,7 +459,6 @@ a {
 	--h: 212deg;
 	--l: 43%;
 	--brandColor: hsl(var(--h), 71%, var(--l));
-	font-family: Montserrat, sans-serif;
 	margin: 0;
 }
 
@@ -501,6 +500,28 @@ a {
 		var(--c1) var(--stop),
 		var(--c2) var(--stop)
 	);
+}
+
+#toDo_list h3 {
+	display: flex;
+	align-items: baseline;
+	margin: 0 0 1rem;
+	color: rgb(70 70 70);
+}
+
+#toDo_list h3::before {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	margin-right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	content: counter(list);
+	padding: 1rem;
+	border-radius: 50%;
+	background-color: var(--c1);
+	color: white;
 }
 
 @media (min-width: 40em) {
