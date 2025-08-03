@@ -484,7 +484,7 @@ a {
 	box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
 	border-radius: 0.25rem;
 	overflow: hidden;
-	background-color: #12B149;
+	background-color: mintcream;
 }
 
 #toDo_list li::before {
@@ -506,7 +506,6 @@ a {
 	display: flex;
 	align-items: baseline;
 	margin: 0 0 1rem;
-	color: rgb(70 70 70);
 }
 
 #toDo_list h3::before {
@@ -521,7 +520,11 @@ a {
 	padding: 1rem;
 	border-radius: 50%;
 	background-color: var(--c1);
-	color: white;
+	color: mintcream;
+}
+
+#toDo_list p{
+  text-align: left;
 }
 
 @media (min-width: 40em) {
