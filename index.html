@@ -7,7 +7,6 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="script.js"></script>
         <script src="components/footer.js" type="text/javascript" defer></script>
-        <script src="components/menu_head.js" type="text/javascript" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         $(document).ready(function () {
@@ -43,7 +42,8 @@
     </head>
 
 <body>
-    </div>
+    <!--Header/Menu-->
+    </div> 
     <header id="header">
         <nav class="nav">
             <button class="toggle-menu" onclick="menuFunction()">
@@ -52,6 +52,7 @@
         </nav>
     </header>
 
+    <!--Menu Information-->
     <div id="menu" class="">
         <nav class="main-nav">
             <ul>
@@ -65,15 +66,14 @@
         </nav>
     </div>
 
+    <!--Page greeting-->
     <div>
-    <section>
-        <h1>Tip to Tails</h1>
-        <p>My goal is simple: you wear your clothing, it does not wear you.</p>
-        <p href="https://docs.google.com/forms/d/e/1FAIpQLSfC6Y3mV-p9SZBbEjt3NSJQyecYNzAQMlhmfG2uq0SDXQh1eA/viewform?usp=header">Book an Appointment</p>
-    </section>
-    </div>
+        <section>
+            <h1>Tip to Tails</h1>
+            <p>My goal is simple: you wear your clothing, it does not wear you.</p>
+            <p href="https://docs.google.com/forms/d/e/1FAIpQLSfC6Y3mV-p9SZBbEjt3NSJQyecYNzAQMlhmfG2uq0SDXQh1eA/viewform?usp=header">Book an Appointment</p>
+        </section>
 
-    <div>
         <section>
             <h2>Hours</h2>
             <p>Weekdays</p>
@@ -83,84 +83,84 @@
         </section>
     </div> 
 
+    <!--Services List-->
     <div id="services">
     <ul class="gallery">
         <li>
             <div class="overlay"></div>
-                <div class="info">
-                    <h2>Quick Fixes</h2>
-                    <p>Wait while I work</p>
-                    <a href="#" class="btn">Services</a>
+            <div class="info">
+                <h2>Quick Fixes</h2>
+                <p>Walk in and wait</p>
+                <a href="#" class="btn">Services</a>
                 <div class="description">
+                    <p>Pricing: $</p>
                     <p>
-                    Hemming pants less than 3 inches, patches less than 5 square inches, sewing holes closed, fixing buttons, 
-                    extending pockets
+                        Hemming: skirts, dresses, pants - 3 inches or less <br>
+                        Patches: 5 square inches or less <br>
+                        Closing Holes: non-knit fabrics only <br>
+                        Re-attaching Buttons <br>
+                        Extending pockets
                     </p>
+                    <p>Please be aware those with appointments will take priority over walk ins. Same-day returns are not gaurenteed.</p>
                 </div>
             </div>
-                <div class="bg-img">
+            <div class="bg-img">
                 <img src="https://unsplash.it/1000/400?image=1044">
             </div>
         </li>
         
         <li>
             <div class="overlay"></div>
-                <div class="info">
-                    <h2>Alterations</h2>
-                    <p>For technical work</p>
+            <div class="info">
+                <h2>Alterations</h2>
+                <p>For technical work</p>
                 <a href="#" class="btn" >See Description</a>
                 <div class="description">
-                    <p>
-                        Tailoring pants, shirts. Tailoring dresses and jackets
-                    </p>
-                </div><!-- /.description-->
+                    <p>Tailoring pants, shirts. Tailoring dresses and jackets</p>
+                </div>
             </div>
-            <!--/.info -->
-
             <div class="bg-img">
-            <img src="https://unsplash.it/1000/400?image=1014">
+                <img src="https://unsplash.it/1000/400?image=1014">
             </div>
         </li>
+
         <li>
             <div class="overlay"></div>
             <div class="info">
                 <h2>Neurodivergent Tailoring</h2>
-                    <p>Making clothing accomidate you!</p>
-                    <a href="#" class="btn" >See Description</a>
+                <p>Making clothing accomidate you!</p>
+                <a href="#" class="btn" >See Description</a>
                 <div class="description">
                     <p>
                     Lining clothing, hiding seams, exhanging fastenings, other
                     </p>
-                </div><!-- /.description-->
+                </div>
             </div>
-            <!--/.info -->
-
             <div class="bg-img">
-            <img src="https://unsplash.it/1000/400?image=809">
+                <img src="https://unsplash.it/1000/400?image=809">
             </div>
         </li>
+
         <li>
             <div class="overlay"></div>
-                <div class="info">
-                    <h2>Halloween Special</h2>
-                    <p>Something for the kids</p>
+            <div class="info">
+                <h2>Halloween Special</h2>
+                <p>Something for the kids</p>
                 <a href="#" class="btn">See Description</a>
                 <div class="description">
                     <p>
                     I will fit store-bought halloween costumes for children under 13 for you. I understand halloween costumes can get expensive
                     and I want every kid to feel like the shark, zombie, or princess that they are.
                     </p>
-                </div><!-- /.description-->
+                </div>
             </div>
-            <!--/.info -->
             <div class="bg-img">
-            <img src="https://unsplash.it/1000/400?image=1045">
+                <img src="https://unsplash.it/1000/400?image=1045">
             </div>
         </li>            
     </ul>
     </div>
     
     <footer-component></footer-component>
-</body>
-  
+</body>  
 </html>
