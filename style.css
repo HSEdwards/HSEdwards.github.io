@@ -81,7 +81,8 @@ h3::before {
 p {
   font-size: 1.2em;
   line-height: 150%;
-  text-align: center;
+  text-align: left;
+  text-indent: 10rem;
   color: MintCream;
   letter-spacing: 0.5px;
 }
@@ -484,7 +485,7 @@ a {
 	box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
 	border-radius: 0.25rem;
 	overflow: hidden;
-	background-color: mintcream;
+	background-color: #24652d;
 }
 
 #toDo_list li::before {
