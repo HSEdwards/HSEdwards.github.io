@@ -2,6 +2,8 @@
 @import "compass/css3";
 @import "compass/reset/utilities";
 @include global-reset;
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
 
 
 body {
@@ -233,30 +235,47 @@ nav a:hover ~ #indicator {
   }
 }
 
-/* image gallery */
-#lightSlider.demo {
-  width: 450px;
-  float: center;
-  justify-content: center;
+* {
+ box-sizing: border-box;
 }
-#lightSlider ul {
-  list-style: none outside none;
-  padding-left: 100;
-  margin-bottom: 0;
-  justify-content: center;
+ 
+#galleryPage body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--gradient-9);
 }
-#lightSlider li {
-  justify-content: center;
-  display: block;
-  float: center;
-  margin-right: 6px;
-  cursor: pointer;
+
+:root {
+  --magnifier: 6;
+  --gap: 1vmin;
+  --transition: 0.5s;
 }
-#lightSlider img {
+  
+.container {
+  width: 80vw;
+  height: 50vmin;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  display: block;
-  height: auto;
-  max-width: 100%;
+  gap: var(--gap);
+}
+
+img {
+  --brightness: 0.75;
+  --grayscale: 1;
+  transition: flex var(--transition), filter var(--transition);
+  height: 100%;
+  filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+  object-fit: cover;
+  overflow: hidden;
+  flex: 1;
+}
+
+img:hover {
+  --brightness: 1.15;
+  --grayscale: 0;
+  flex: var(--magnifier);
 }
 
 
