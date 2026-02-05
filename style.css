@@ -143,18 +143,16 @@ h3 {
   font-family: "Gambetta", serif;
   letter-spacing: 0.5px;
   margin-bottom: 0.8rem;
-  color: #12B149;
+  color: var(--accentColor1);
   outline: none;
   text-align: center;
   display: flex;
-	align-items: baseline;
 }
 
 /*general text*/
 p { 
   font-size: 1.2em;
   line-height: 150%;
-  text-align: center;
   width: 100%;
   text-indent: 0rem;
   color: var(--mainText);
@@ -171,11 +169,11 @@ a {
 
 /*Text Box*/
 .card {
-	display: flex;
+	
 	flex-direction: column;
   text-align: left;
 	width: 45rem;
-	height: 25rem;
+	height: auto;
 	border: 1px solid var(--mainColor);
 	position: relative;
 	padding: 2rem;
@@ -259,9 +257,6 @@ a {
 		}
 	}
 }
-.card:hover{
-    height: 75rem;
-  }
 
 /*Services drop down*/
 * {
@@ -272,8 +267,10 @@ a {
 .service-container {
   display: flex;
   flex-direction: column;
-  height: 600px;
-  max-width: 500px;
+  height: flex;
+  width: 41rem;
+  align-content: center;
+  
 }
 .service-container:hover{
   height: fit-content;
@@ -281,34 +278,29 @@ a {
 
 .panel {
   position: relative;
-  border-radius: 20px;
-  background: var(--light-grey);
   height: 58px;
   margin: 5px;
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.8),
-    5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;  
+  border-width: 1px;
+  border-color: var(--mainColor);
+  padding: 7px;
+
   cursor: pointer;
   transition: flex 0.4s linear;
   overflow: hidden;
+  
 }
 
 .panel:hover {
-  height: 950px;
+  height: fit-content;
 }
-
 
 .service {
   display: flex;
-  margin: 12px 20px;
-}
-
-.service h3 {
-  margin: 0 10px;
 }
 
 .panel:hover .service {
-  color: var(--accent-color);
-  height: fit-content
+  height: fit-content;
 }
 
 .service-desc {
@@ -318,11 +310,10 @@ a {
   transition: opacity 0.2s ease-in;
 }
 
-
 .panel:hover .service-desc {
   opacity: 1;
   transition: opacity 0.2s ease-in 0.3s;
-  height: 100px;
+  height: fit-content;
 }
 
 .service-desc:hover {
